@@ -15,9 +15,10 @@ class SignInPage extends StatelessWidget {
   }
 
   Widget _buildContent() {
-    return Container(
-      color: Colors.blueGrey,
+    return Padding(
+      padding: const EdgeInsets.all(16.0),
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
           Container(
@@ -27,6 +28,9 @@ class SignInPage extends StatelessWidget {
               height: 100,
             ),
           ),
+          const SizedBox(
+            height: 20,
+          ),
           Container(
             color: Colors.red,
             child: const SizedBox(
@@ -34,12 +38,18 @@ class SignInPage extends StatelessWidget {
               height: 100,
             ),
           ),
+          const SizedBox(
+            height: 20,
+          ),
           Container(
             color: Colors.green,
             child: const SizedBox(
               // width: 200,
               height: 100,
             ),
+          ),
+          const SizedBox(
+            height: 20,
           ),
         ],
       ),
