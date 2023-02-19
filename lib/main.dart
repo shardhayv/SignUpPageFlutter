@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:layout/app/sign_in/sign_in_page.dart';
 
 void main() {
   runApp(const LayoutApp());
@@ -14,9 +15,9 @@ class LayoutApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.deepPurple,
       ),
-      home: Container(
-        color: Colors.blueGrey,
-      ),
+      home: SignInPage(),
+      debugShowCheckedModeBanner: false,
     );
+
   }
 }
