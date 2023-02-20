@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:layout/common_widgets/custom_elevated_button.dart';
 
 class SignInPage extends StatelessWidget {
   const SignInPage({Key? key}) : super(key: key);
@@ -35,24 +36,27 @@ class SignInPage extends StatelessWidget {
           ),
           SizedBox(
             height: 45,
-            child: ElevatedButton(
-              onPressed: _signInWithGoogle,
-              style: ButtonStyle(
-                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                  RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(100.0),
-                    side: const BorderSide(
-                      color: Colors.blue,
-                      width: 1.0,
-                    ),
-                  ),
-                ),
-              ),
+            child: CustomElevatedButton(
+              borderRadius: BorderRadius.circular(12.0),
+              color: Colors.blue,
+              onPressed: () {},
               child: const Text(
                 'Sign in with Google',
                 style: TextStyle(color: Colors.white, fontSize: 15.0),
               ),
             ),
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+           CustomElevatedButton(
+            borderRadius: BorderRadius.circular(12.0),
+            color: Colors.blue.shade900,
+            onPressed: () {},
+             child: const Text(
+               'Sign in with Facebook',
+               style: TextStyle(color: Colors.white, fontSize: 15.0),
+             ),
           ),
         ],
       ),
