@@ -11,6 +11,7 @@ class SignInPage extends StatelessWidget {
         elevation: 10.0,
       ),
       body: _buildContent(),
+      backgroundColor: Colors.white,
     );
   }
 
@@ -21,38 +22,44 @@ class SignInPage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-          Container(
-            color: Colors.yellow,
-            child: const SizedBox(
-              // width: 200,
-              height: 100,
+          const Text(
+            'Sign In',
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontSize: 30,
+              fontWeight: FontWeight.w900,
             ),
           ),
           const SizedBox(
             height: 20,
           ),
-          Container(
-            color: Colors.red,
-            child: const SizedBox(
-              // width: 200,
-              height: 100,
+          SizedBox(
+            height: 45,
+            child: ElevatedButton(
+              onPressed: _signInWithGoogle,
+              style: ButtonStyle(
+                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                  RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(100.0),
+                    side: const BorderSide(
+                      color: Colors.blue,
+                      width: 1.0,
+                    ),
+                  ),
+                ),
+              ),
+              child: const Text(
+                'Sign in with Google',
+                style: TextStyle(color: Colors.white, fontSize: 15.0),
+              ),
             ),
-          ),
-          const SizedBox(
-            height: 20,
-          ),
-          Container(
-            color: Colors.green,
-            child: const SizedBox(
-              // width: 200,
-              height: 100,
-            ),
-          ),
-          const SizedBox(
-            height: 20,
           ),
         ],
       ),
     );
+  }
+
+  void _signInWithGoogle() {
+    // TODO: Auth with Google
   }
 }
